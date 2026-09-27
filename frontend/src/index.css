@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Outfit', sans-serif;
+    color: #2C2A29;
+    background-color: #FFF5F6;
+  }
+}
+
+/* Custom Luxury UI Styling */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #B8860B 0%, #D4AF37 40%, #AA771C 70%, #E6C687 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #C5A059 0%, #D4AF37 50%, #B8860B 100%);
+}
+
+.gold-shadow {
+  box-shadow: 0 10px 30px -5px rgba(212, 175, 55, 0.15), 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+}
+
+.rose-shadow {
+  box-shadow: 0 16px 40px -8px rgba(225, 29, 72, 0.16), 0 6px 18px 0 rgba(0, 0, 0, 0.04);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(244, 63, 94, 0.18);
+}
+
+/* Subtle Floating Animations */
+@keyframes petalFall {
+  0% {
+    transform: translateY(-5vh) rotate(0deg) translateX(0px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(50vh) rotate(180deg) translateX(30px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(105vh) rotate(360deg) translateX(-20px);
+    opacity: 0;
+  }
+}
+
+.sakura-petal {
+  position: absolute;
+  background: linear-gradient(135deg, #FDA4AF 0%, #F43F5E 100%);
+  border-radius: 15px 0px 15px 0px;
+  pointer-events: none;
+  animation: petalFall 12s linear infinite;
+}
+
+@keyframes rosePetalDrift {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+    opacity: 0.65;
+  }
+  50% {
+    transform: translateY(-18px) rotate(18deg) scale(1.08);
+    opacity: 0.95;
+  }
+}
+
+.rose-petal-float {
+  animation: rosePetalDrift 7s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF5F6;
+}
+::-webkit-scrollbar-thumb {
+  background: #F43F5E;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E11D48;
+}
