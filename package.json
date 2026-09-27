@@ -1,0 +1,19 @@
+{
+  "name": "wedding-app",
+  "version": "1.0.0",
+  "description": "Sri Lankan Wedding Invitation Web Application",
+  "type": "module",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "start": "node backend/server.js",
+    "dev": "npm --prefix backend run dev"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.3.0",
+    "mongoose": "^8.3.0"
+  }
+}
