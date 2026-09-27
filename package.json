@@ -4,7 +4,7 @@
   "description": "Sri Lankan Wedding Invitation Web Application",
   "type": "module",
   "scripts": {
-    "build": "cd frontend && npm install && npm run build",
+    "build": "cd frontend && npm install --include=dev && npm run build",
     "start": "node backend/server.js",
     "dev": "npm --prefix backend run dev"
   },
